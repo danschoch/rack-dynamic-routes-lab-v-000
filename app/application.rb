@@ -3,8 +3,6 @@ class Application
     req = Rack::Request.new(env)
     resp = Rack::Response.new
 
-    @@items = []
-
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
 
